@@ -1,11 +1,10 @@
-import showHealth from '../health';
+import getHealth from "../health";
 
 test.each([
-  [{ name: 'Маг', health: 90 }, 'healthy'],
-  [{ name: 'НеМаг', health: 45 }, 'wounded'],
-  [{ name: 'НеМаг1', health: 14 }, 'critical'],
-])(('show health with %s level'), (level, expected) => {
-  const result = showHealth(level);
-
+  [{ name: "magician", health: 13 }, "critycal"],
+  [{ name: "magician", health: 48 }, "wounded"],
+  [{ name: "magician", health: 92 }, "healthy"],
+])("%o", (status, expected) => {
+  const result = getHealth(status);
   expect(result).toBe(expected);
 });

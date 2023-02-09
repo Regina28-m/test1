@@ -1,6 +1,3 @@
-// TODO: write your code here
-import sum from './basic';
+import getHealth from "./health";
 
-console.log('worked');
-
-console.log(sum([1, 2]));
+getHealth({ name: "magician", health: 90 });
